@@ -73,7 +73,7 @@ class Recommendation
     public function algorithm3() : array 
     {
         return array_filter($this->movies, function($title) {
-            return strpos($title, ' ') !== false;
+            return strpos(trim($title), ' ') !== false;
         });
     }
 }
